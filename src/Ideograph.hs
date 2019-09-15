@@ -1,11 +1,6 @@
 module Ideograph ( isIdeograph, genIdeoName ) where
 
-import Hex
-
-inRange :: Integer -> Integer -> Integer -> Bool
-inRange x y z = x >= y && x <= z
-inUniRange :: Integer -> String -> String -> Bool
-inUniRange x a b = inRange x (hex2dec a) (hex2dec b)
+import Unitility
 
 isIdeograph :: Integer -> Bool
 isIdeograph x = (inUniRange x "3400"  "4DB5")  ||

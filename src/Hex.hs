@@ -1,6 +1,4 @@
-module Hex ( hex2dec, dec2hex, unihex ) where
-
-import Text.Printf
+module Hex ( hex2dec, dec2hex ) where
 
 hexChar :: Char -> Integer
 hexChar '0' = 0
@@ -55,6 +53,3 @@ dec2hex :: Integer -> String
 dec2hex int = map decChar (reverse (listify int))
   where listify 0 = []
         listify x = (mod x 16) : listify (div x 16)
-
-unihex :: Integer -> String
-unihex n = printf "%04s" (dec2hex n)
