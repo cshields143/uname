@@ -15159,6 +15159,7 @@ getSP 917996 = "VARIATION SELECTOR-253"
 getSP 917997 = "VARIATION SELECTOR-254"
 getSP 917998 = "VARIATION SELECTOR-255"
 getSP 917999 = "VARIATION SELECTOR-256"
+getSP _ = ""
 
 isSP :: Integer -> Bool
 isSP n = if (getSP n) == "" then False else True
